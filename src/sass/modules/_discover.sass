@@ -1,0 +1,29 @@
+section:nth-of-type(4)
+    background-image: url(../../public/img/cta-bg.jpg)
+    height: 70vh
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h1
+        color: white
+        font-family: poppinslight
+        text-align: center
+    button
+        background-color: $rouge
+        border: none
+        border-radius: 5px
+        font-family: poppinsregular
+        padding: 8px 15px
+        color: white
+        margin-top: 15px
+
+@media screen and ( max-width: 1000px )
+    section:nth-of-type(4)
+        height: 50vh
+        h1
+            font-size: 20px
+            margin: 0px 10%

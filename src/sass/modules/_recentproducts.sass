@@ -1,0 +1,66 @@
+section:nth-of-type(3)
+    margin: 20px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 30px 0
+    h1
+        font-family: poppinsregular
+        font-size: 20px
+        margin: 40px
+    .container
+        padding: 0 10%
+        z-index: -1
+        .row
+            .col-4
+                margin-bottom: 10px
+                img
+                    width: 100%
+                div
+                    display: flex
+                    flex-wrap: wrap
+                    .sale
+                        flex: 1
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        div
+                            background-color: $rouge
+                            color: white
+                            border-radius: 50%
+                            width: 50px
+                            height: 50px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            font-family: poppinslight
+                            font-size: 12px
+                    .prix
+                        flex: 2
+                        display: flex
+                        flex-direction: column
+                        padding: 10px
+                        align-items: center
+                        font-family: poppinslight
+                        span
+                            margin-bottom: 10px
+                        div
+                            span:nth-of-type(1)
+                                text-decoration: line-through
+                                margin-right: 5px
+                            span:nth-of-type(2)
+                                color: $rouge
+                        span:nth-of-type(2)
+                            color: $rouge
+
+@media screen and ( max-width: 1000px )
+    section:nth-of-type(3)
+        .container
+            .row
+                .col-4
+                    div
+                        .sale
+                            div
+                                width: 30px
+                                height: 30px
+                                font-size: 8px
