@@ -10,9 +10,8 @@ section:nth-of-type(3)
         margin: 40px
     .container
         padding: 0 10%
-        z-index: -1
         .row
-            .col-4
+            .styleCol
                 margin-bottom: 10px
                 img
                     width: 100%
@@ -52,6 +51,44 @@ section:nth-of-type(3)
                                 color: $rouge
                         span:nth-of-type(2)
                             color: $rouge
+.divImg
+    display: block
+    position: relative
+    overflow: hidden
+    img
+        width: 100%
+        display: block
+        transition: transform 0.5s
+        position: relative
+    img:hover
+        transform: scale(1.1)
+    .divEtiquette
+        position: absolute
+        display: flex
+        flex-direction: row
+        height: 70px
+        width: 100%
+        opacity: 0
+        bottom: -20%
+        -webkit-transition: all 0.6s ease
+        -moz-transition: all 0.6s ease
+        -o-transition: all 0.6s ease
+        div
+            font-family: poppinslight
+            color: white
+            display: flex
+            font-size: 10px
+            align-items: center
+            justify-content: center
+        div:nth-child(1)
+            background-color: black
+            width: 50%
+        div:nth-child(2)
+            background-color: $rouge
+            width: 50%
+.divImg:hover .divEtiquette
+    opacity: 1
+    bottom: 0
 
 @media screen and ( max-width: 1000px )
     section:nth-of-type(3)

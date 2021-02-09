@@ -15833,7 +15833,6 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 2%;
 }
 
 header h1 {
@@ -15844,7 +15843,10 @@ header h1 {
 header nav {
   display: flex;
   justify-content: space-around;
-  margin: 0 15%;
+  align-items: center;
+  width: 100%;
+  padding: 2% 23%;
+  background-color: white;
 }
 
 header nav a, header nav a:hover {
@@ -15890,6 +15892,22 @@ header nav div .btnConnexion {
   display: none;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  padding: 2% 23%;
+  z-index: 2;
+}
+
+.stickyLogo {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  margin: 0;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
 .modal-bg {
   position: fixed;
   top: 0;
@@ -15903,27 +15921,123 @@ header nav div .btnConnexion {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s;
+  z-index: 99;
 }
 
 .modal-bg .modal-contenu {
   position: relative;
   background-color: white;
   border-radius: 5px;
-  padding: 5%;
+  padding: 5% 5% 2% 5%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 60%;
 }
 
 .modal-bg .modal-contenu h2 {
   color: black;
-}
-
-.modal-bg .modal-contenu span {
+  font-family: poppinsbold;
   position: absolute;
   top: 5px;
+  left: 10px;
+}
+
+.modal-bg .modal-contenu div {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-bg .modal-contenu div button {
+  background-color: #DD4545;
+  border: none;
+  border-radius: 3px;
+  font-family: poppinsregular;
+  color: white;
+  padding: 5px 10px;
+  margin: 3px;
+}
+
+.modal-bg .modal-contenu div button:hover {
+  opacity: 70%;
+}
+
+.modal-bg .modal-contenu label:nth-of-type(1), .modal-bg .modal-contenu label:nth-of-type(3) {
+  font-family: poppinsregular;
+  font-size: 17px;
+}
+
+.modal-bg .modal-contenu label:nth-of-type(2) {
+  font-family: poppinsregular;
+  font-size: 12px;
+  color: gray;
+  font-style: italic;
+}
+
+.modal-bg .modal-contenu input {
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.modal-bg .modal-contenu .checkBox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.modal-bg .modal-contenu .checkBox input {
+  width: 10px;
+  margin-right: 5px;
+}
+
+.modal-bg .modal-contenu .checkBox label {
+  font-size: 12px;
+  margin: 0;
+}
+
+.modal-bg .modal-contenu .submitBtn {
+  background-color: #2C8BFA;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: white;
+  font-family: poppinsregular;
+}
+
+.modal-bg .modal-contenu .divIcon i {
+  font-size: 23px;
+  margin: 0 5px;
+}
+
+.modal-bg .modal-contenu .divIcon i:nth-of-type(1) {
+  color: #2C8BFA;
+}
+
+.modal-bg .modal-contenu .divIcon i:nth-of-type(3) {
+  color: #F8CE02;
+}
+
+.modal-bg .modal-contenu .closeModal {
+  position: absolute;
+  top: 10px;
   right: 10px;
+  background-color: #DD4545;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  text-align: center;
   cursor: pointer;
+  padding: 2px;
+}
+
+.modal-bg .modal-contenu .closeModal:hover {
+  opacity: 60%;
 }
 
 .bg-active {
@@ -15931,11 +16045,25 @@ header nav div .btnConnexion {
   opacity: 1;
 }
 
+#lab1supp {
+  display: none;
+}
+
+#inp1supp {
+  display: none;
+}
+
 @media screen and (max-width: 830px) {
   header nav .dropdown {
     display: initial;
   }
   header nav a {
+    display: none;
+  }
+  .stickyLogo {
+    display: none;
+  }
+  .sticky {
     display: none;
   }
 }
@@ -16044,30 +16172,29 @@ section:nth-of-type(3) h1 {
 
 section:nth-of-type(3) .container {
   padding: 0 10%;
-  z-index: -1;
 }
 
-section:nth-of-type(3) .container .row .col-4 {
+section:nth-of-type(3) .container .row .styleCol {
   margin-bottom: 10px;
 }
 
-section:nth-of-type(3) .container .row .col-4 img {
+section:nth-of-type(3) .container .row .styleCol img {
   width: 100%;
 }
 
-section:nth-of-type(3) .container .row .col-4 div {
+section:nth-of-type(3) .container .row .styleCol div {
   display: flex;
   flex-wrap: wrap;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .sale {
+section:nth-of-type(3) .container .row .styleCol div .sale {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .sale div {
+section:nth-of-type(3) .container .row .styleCol div .sale div {
   background-color: #DD4545;
   color: white;
   border-radius: 50%;
@@ -16080,7 +16207,7 @@ section:nth-of-type(3) .container .row .col-4 div .sale div {
   font-size: 12px;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .prix {
+section:nth-of-type(3) .container .row .styleCol div .prix {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -16089,21 +16216,75 @@ section:nth-of-type(3) .container .row .col-4 div .prix {
   font-family: poppinslight;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .prix span {
+section:nth-of-type(3) .container .row .styleCol div .prix span {
   margin-bottom: 10px;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .prix div span:nth-of-type(1) {
+section:nth-of-type(3) .container .row .styleCol div .prix div span:nth-of-type(1) {
   text-decoration: line-through;
   margin-right: 5px;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .prix div span:nth-of-type(2) {
+section:nth-of-type(3) .container .row .styleCol div .prix div span:nth-of-type(2) {
   color: #DD4545;
 }
 
-section:nth-of-type(3) .container .row .col-4 div .prix span:nth-of-type(2) {
+section:nth-of-type(3) .container .row .styleCol div .prix span:nth-of-type(2) {
   color: #DD4545;
+}
+
+.divImg {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.divImg img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+  position: relative;
+}
+
+.divImg img:hover {
+  transform: scale(1.1);
+}
+
+.divImg .divEtiquette {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 100%;
+  opacity: 0;
+  bottom: -20%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.divImg .divEtiquette div {
+  font-family: poppinslight;
+  color: white;
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.divImg .divEtiquette div:nth-child(1) {
+  background-color: black;
+  width: 50%;
+}
+
+.divImg .divEtiquette div:nth-child(2) {
+  background-color: #DD4545;
+  width: 50%;
+}
+
+.divImg:hover .divEtiquette {
+  opacity: 1;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1000px) {

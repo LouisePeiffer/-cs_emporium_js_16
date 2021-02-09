@@ -2,15 +2,17 @@ header
     display: flex
     justify-content: center
     flex-direction: column
-    padding: 2%
+    // padding: 2%
     h1
         text-align: center
         margin: 30px 0
     nav
         display: flex
         justify-content: space-around
-        margin: 0 15%
-        
+        align-items: center
+        width: 100%
+        padding: 2% 23%
+        background-color: white
         a, a:hover
             text-decoration: none
             font-size: 13px
@@ -40,6 +42,18 @@ header
 .dropdown
     font-family: poppinslight
     display: none
+.sticky
+    position: fixed
+    top: 0
+    padding: 2% 23%
+    z-index: 2
+.stickyLogo
+    position: fixed
+    top: 0
+    z-index: 3  
+    margin: 0
+    padding-left: 50px
+    padding-top: 10px
 
 // MODAL
 .modal-bg
@@ -55,25 +69,102 @@ header
     visibility: hidden
     opacity: 0
     transition: visibility 0s, opacity 0.5s
+    z-index: 99
     .modal-contenu
         position: relative
         background-color: white
         border-radius: 5px
-        padding: 5%
+        padding: 5% 5% 2% 5%
         display: flex
         flex-direction: column
-        align-items: center
+        align-items: flex-start
+        width: 60%
         h2
             color: black
-        span
+            font-family: poppinsbold
             position: absolute
             top: 5px
+            left: 10px
+        div
+            margin: 5%
+            display: flex
+            justify-content: center
+            width: 100%
+            button
+                background-color: $rouge
+                border: none
+                border-radius: 3px
+                font-family: poppinsregular
+                color: white
+                padding: 5px 10px
+                margin: 3px
+            button:hover
+                opacity: 70%
+        label:nth-of-type(1),label:nth-of-type(3)
+            font-family: poppinsregular
+            font-size: 17px
+        label:nth-of-type(2)
+            font-family: poppinsregular
+            font-size: 12px
+            color: gray
+            font-style: italic
+        input
+            width: 100%
+            border: 1px solid lightgray
+            border-radius: 3px
+        .checkBox
+            width: 100%
+            display: flex
+            justify-content: flex-start
+            margin: 10px 0
+            input
+                width: 10px
+                margin-right: 5px
+            label
+                font-size: 12px
+                margin: 0
+        .submitBtn
+            background-color: #2C8BFA
+            border: none
+            border-radius: 3px
+            padding: 5px 10px
+            color: white
+            font-family: poppinsregular
+        .divIcon
+            // width: 20%
+            i
+                font-size: 23px
+                margin: 0 5px
+            i:nth-of-type(1)
+                color: #2C8BFA
+            i:nth-of-type(3)
+                color: #F8CE02
+        .closeModal
+            position: absolute
+            top: 10px
             right: 10px
+            background-color: $rouge
+            border: none
+            border-radius: 3px
+            color: white
+            width: 25px
+            height: 25px
+            text-align: center
             cursor: pointer
+            padding: 2px
+        .closeModal:hover
+            opacity: 60%
 .bg-active
     visibility: visible
     opacity: 1
-
+#lab1supp
+    display: none
+#inp1supp
+    display: none
+// .checkBoxFemme
+//     display: none
+// .checkBoxHomme
+//     display: none
 
 @media screen and ( max-width: 830px )
     header
@@ -82,4 +173,7 @@ header
                 display: initial
             a
                 display: none
-            
+    .stickyLogo
+        display: none
+    .sticky
+        display: none

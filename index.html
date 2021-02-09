@@ -10,8 +10,8 @@
 <body>
     <!-- HEADER -->
     <header>
-        <h1>emporium.</h1>
-        <nav>
+        <h1 class="logonav">emporium.</h1>
+        <nav class="divnav">
             <!-- DROPDOWN MENU -->
             <div class="dropdown">
                 <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,14 +42,44 @@
     </header>
     <!-- MODAL CONNEXION -->
     <div class="modal-bg">
+        <!-- CONNEXION -->
         <div class="modal-contenu">
-            <h2>Connectez-vous</h2>
-            <label for="email">Email :</label>
-            <input type="text" placeholder="Email">
-            <label for="mdp">Mot de passe :</label>
-            <input type="password" placeholder="Mot de passe">
-            <span class="closeModal">x</span>
+            <h2>emporium.</h2>
+            <div>
+                <button class="btnConnexion2">Connexion</button>
+                <button class="btnInscription">Inscription</button>
+            </div>
+            <label for="email">Email address</label>
+            <input type="text" placeholder="hotgirlshit@gmail.com">
+            <label for="email">On god we keep it to ourselves</label>
+            <label for="mdp">Password</label>
+            <input type="password" placeholder="*******">
+            <!-- INSCRIPTION --> 
+            <label id="lab1supp" for="mdp">Confirmez votre mot de passe</label>
+            <input id="inp1supp" type="password" placeholder="*******">
+            <!-- <div class="checkBoxFemme">
+                <input type="checkbox" name="" id="">
+                <label for="">Femme</label>
+            </div>
+            <div class="checkBoxHomme">
+                <input type="checkbox" name="" id="">
+                <label for="">Homme</label>
+            </div> -->
+            <!-- INSCRIPTION --> 
+            <div class="checkBox">
+                <input type="checkbox" name="" id="">
+                <label for="">Check me out</label>
+            </div>
+            <button class="submitBtn">Submit</button>
+            <div class="divIcon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <span class="closeModal"><i class="fas fa-times"></i></span>
         </div>
+
     </div>
     <!-- SECTION 1 -- SHOPAT -->
     <section id="shopAtSection">
@@ -78,8 +108,20 @@
         <div class="container">
             <!-- ROW 1 -->
             <div class="row">
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Luxury Sofa</span>
@@ -87,8 +129,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-gloves.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-gloves.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="sale"><div>SALE!</div></div>
                         <div class="prix">
@@ -97,8 +151,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-cups.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-cups.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Colourful Bowls</span>
@@ -109,8 +175,20 @@
             </div>
             <!-- ROW 2 -->
             <div class="row">
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-bag.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-bag.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="sale"><div>SALE!</div></div>
                         <div class="prix">
@@ -119,8 +197,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Minimal T-shirt</span>
@@ -128,8 +218,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-plates.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-plates.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Plates Set</span>
@@ -140,8 +242,20 @@
             </div>
             <!-- ROW 3 -->
             <div class="row">
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Modern Sofa</span>
@@ -149,8 +263,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-bed.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-bed.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Bed Linen</span>
@@ -158,8 +284,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <img src="./public/img/products_mini/product-shoes.jpg" alt="">
+                <div class="styleCol col-12 col-lg-4">
+                    <div class="divImg">
+                        <img src="./public/img/products_mini/product-shoes.jpg" alt="">
+                        <div class="divEtiquette">
+                            <div>
+                                <i class="far fa-eye"></i>
+                                <span>View Details</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
                     <div>
                         <div class="prix">
                             <span>Minimal Shoes</span>
