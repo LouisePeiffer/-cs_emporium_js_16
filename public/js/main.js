@@ -11,12 +11,14 @@ btnConnexion.addEventListener('click', function () {
 
 closeModal.addEventListener('click', function(){
     modalbg.classList.remove('bg-active')
+    lab1supp.style.display = 'none'
+    inp1supp.style.display = 'none'
 })
 
 // console.log(modalContenu.children)
 // modalbg.addEventListener('click', (e)=> {
 //     let item = e.target
-//     if (item == modalContenu && item == modalContenu.children) {
+//     if (item == modalbg && item == modalbg.children) {
 //     } else {
 //         modalbg.classList.remove('bg-active')
 //     }
@@ -75,4 +77,45 @@ function myFunction() {
     }
 }
 
+// // DARK MODE
+// let btnNoir = document.querySelector('.btnBlack')
+// let body = document.querySelector('body')
 
+// btnNoir.addEventListener('click', ()=> {
+//     body.classList.toggle('dark')
+//     navbar.classList.toggle('dark')
+//     if (body.classList[0] == 'dark') {
+//         btnNoir.innerHTML = 
+//     }
+// })
+
+// CARROUSEL
+let piti = document.querySelectorAll('.piti')
+let styleCol = document.querySelectorAll('.styleCol')
+
+piti[0].onclick = () => {
+    // piti.forEach(el => {
+    //     el.
+    // })
+    styleCol.forEach(el => {
+        el.style.left = '0'
+    });
+}
+
+piti[1].onclick = () => {
+    styleCol.forEach(el => {
+        el.style.left = '-27%'
+    });
+}
+
+piti[2].onclick = () => {
+    styleCol.forEach(el => {
+        el.style.left = '-52%'
+    });
+}
+
+piti[3].onclick = () => {
+    styleCol.forEach(el => {
+        el.style.left = '-78%'
+    });
+}

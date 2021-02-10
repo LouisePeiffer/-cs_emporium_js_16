@@ -7,3 +7,55 @@ section:nth-of-type(5)
     h1
         font-family: poppinsregular
         font-size: 20px
+        margin-bottom: 5%
+    .container
+        display: flex
+        overflow: hidden
+        overflow-x: auto
+        padding-bottom: 0
+        &::-webkit-scrollbar
+            visibility: hidden
+        .styleCol
+            margin: 0px 10px
+            position: relative
+            transition: 0.5s
+            .divImg
+                img
+                    width: 235px
+            .prix
+                flex: 2
+                display: flex
+                flex-direction: column
+                padding: 10px
+                align-items: center
+                font-family: poppinslight
+                font-size: 12px
+                span:nth-of-type(2)
+                    color: $rouge
+    .pitiPoints
+        display: flex
+        span
+            border: 1px solid gray
+            width: 10px
+            height: 10px
+            margin: 5px
+            border-radius: 50%
+            cursor: pointer
+        span:hover
+            background-color: gray
+
+@media screen and ( max-width: 768px )    
+    section:nth-of-type(5)
+        .container
+            .styleCol
+                .divImg
+                    img
+                        width: 180px
+
+@media screen and ( max-width: 375px )    
+    section:nth-of-type(5)
+        .container
+            .styleCol
+                .divImg
+                    img
+                        width: 120px

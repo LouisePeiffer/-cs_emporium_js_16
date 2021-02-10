@@ -15838,6 +15838,7 @@ header {
 header h1 {
   text-align: center;
   margin: 30px 0;
+  transition: 0.5s;
 }
 
 header nav {
@@ -16344,6 +16345,71 @@ section:nth-of-type(5) {
 section:nth-of-type(5) h1 {
   font-family: poppinsregular;
   font-size: 20px;
+  margin-bottom: 5%;
+}
+
+section:nth-of-type(5) .container {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+
+section:nth-of-type(5) .container::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+section:nth-of-type(5) .container .styleCol {
+  margin: 0px 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+section:nth-of-type(5) .container .styleCol .divImg img {
+  width: 235px;
+}
+
+section:nth-of-type(5) .container .styleCol .prix {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  font-family: poppinslight;
+  font-size: 12px;
+}
+
+section:nth-of-type(5) .container .styleCol .prix span:nth-of-type(2) {
+  color: #DD4545;
+}
+
+section:nth-of-type(5) .pitiPoints {
+  display: flex;
+}
+
+section:nth-of-type(5) .pitiPoints span {
+  border: 1px solid gray;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section:nth-of-type(5) .pitiPoints span:hover {
+  background-color: gray;
+}
+
+@media screen and (max-width: 768px) {
+  section:nth-of-type(5) .container .styleCol .divImg img {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section:nth-of-type(5) .container .styleCol .divImg img {
+    width: 120px;
+  }
 }
 
 section:nth-of-type(6) {
