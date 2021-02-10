@@ -15867,20 +15867,16 @@ header nav div button {
   margin: 3px;
 }
 
-header nav div .btnWhite {
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 3px;
-  height: 20px;
-  width: 20px;
-}
-
-header nav div .btnBlack {
+header nav div i {
   background-color: black;
   border: 1px solid black;
   border-radius: 3px;
   height: 20px;
   width: 20px;
+  color: white;
+  font-size: 15px;
+  padding: 2px;
+  cursor: grab;
 }
 
 header nav div .btnConnexion {
@@ -15968,6 +15964,7 @@ header nav div .btnConnexion {
 .modal-bg .modal-contenu label:nth-of-type(1), .modal-bg .modal-contenu label:nth-of-type(3) {
   font-family: poppinsregular;
   font-size: 17px;
+  color: black !important;
 }
 
 .modal-bg .modal-contenu label:nth-of-type(2) {
@@ -16093,6 +16090,7 @@ section:nth-of-type(1) div h2 {
 section:nth-of-type(1) div h1 {
   font-family: poppinsbold;
   font-size: 45px;
+  color: black !important;
 }
 
 section:nth-of-type(1) div p {
@@ -16473,6 +16471,19 @@ section:nth-of-type(6) div button {
   padding: 5px 10px;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1s ease-in, transform 1.2s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 @media screen and (max-width: 800px) {
   section:nth-of-type(6) {
     flex-wrap: wrap;
@@ -16557,4 +16568,13 @@ footer .divNoire p {
     display: flex;
     padding: 0;
   }
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark a {
+  color: white;
 }

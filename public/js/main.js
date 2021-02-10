@@ -78,16 +78,21 @@ function myFunction() {
 }
 
 // // DARK MODE
-// let btnNoir = document.querySelector('.btnBlack')
-// let body = document.querySelector('body')
+let btnNoir = document.querySelector('.btnBlack')
+let body = document.querySelector('body')
 
-// btnNoir.addEventListener('click', ()=> {
-//     body.classList.toggle('dark')
-//     navbar.classList.toggle('dark')
-//     if (body.classList[0] == 'dark') {
-//         btnNoir.innerHTML = 
-//     }
-// })
+btnNoir.addEventListener('click',()=> {
+    body.classList.toggle('dark')
+    navbar.classList.toggle('dark')
+    if (body.classList[0] == 'dark') {
+        btnNoir.style.color = 'white'
+        btnNoir.classList.remove('fa-moon')
+        btnNoir.classList.add('fa-sun')
+    } else {
+        btnNoir.classList.remove('fa-sun')
+        btnNoir.classList.add('fa-moon')
+    }
+})
 
 // CARROUSEL
 let piti = document.querySelectorAll('.piti')
@@ -119,3 +124,21 @@ piti[3].onclick = () => {
         el.style.left = '-78%'
     });
 }
+
+// FADE IN BOXES
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+});
+
+faders.forEach(el => {
+    appearOnScroll.observe(el);
+});
