@@ -15829,6 +15829,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -15838,7 +15842,7 @@ header {
 header h1 {
   text-align: center;
   margin: 30px 0;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 header nav {
@@ -15855,6 +15859,10 @@ header nav a, header nav a:hover {
   font-size: 13px;
   font-family: poppinslight;
   color: gray;
+}
+
+header nav a:hover {
+  color: black;
 }
 
 header nav div {
@@ -15887,6 +15895,11 @@ header nav div .btnConnexion {
 .dropdown {
   font-family: poppinslight;
   display: none;
+  color: black !important;
+}
+
+.dropdown a {
+  color: black !important;
 }
 
 .sticky {
@@ -16017,6 +16030,10 @@ header nav div .btnConnexion {
 
 .modal-bg .modal-contenu .divIcon i:nth-of-type(3) {
   color: #F8CE02;
+}
+
+.modal-bg .modal-contenu .divIcon i:nth-of-type(2), .modal-bg .modal-contenu .divIcon i:nth-of-type(4) {
+  color: black !important;
 }
 
 .modal-bg .modal-contenu .closeModal {
@@ -16333,7 +16350,7 @@ section:nth-of-type(4) button {
 }
 
 section:nth-of-type(5) {
-  padding: 10%;
+  padding: 10% 10% 5% 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16413,11 +16430,19 @@ section:nth-of-type(5) .pitiPoints span:hover {
 section:nth-of-type(6) {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0px;
+  margin: 20px 0px 60px 0px;
 }
 
 section:nth-of-type(6) div:nth-child(1), section:nth-of-type(6) div:nth-child(3) {
   background-color: #F3F2F3;
+}
+
+section:nth-of-type(6) div:nth-child(1) i, section:nth-of-type(6) div:nth-child(3) i {
+  color: black !important;
+}
+
+section:nth-of-type(6) div:nth-child(1) h2, section:nth-of-type(6) div:nth-child(3) h2 {
+  color: black !important;
 }
 
 section:nth-of-type(6) div:nth-child(1) p, section:nth-of-type(6) div:nth-child(3) p {
@@ -16525,16 +16550,18 @@ footer .divGrise div:nth-of-type(2) span {
   font-size: 12px;
 }
 
-footer .divGrise div:nth-of-type(3) div {
+footer .divGrise div:nth-of-type(3) .divHash {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-footer .divGrise div:nth-of-type(3) div button {
+footer .divGrise div:nth-of-type(3) .divHash button {
   background-color: #343A40;
   border: 1px solid gray;
   border-radius: 3px;
   color: gray;
-  margin-bottom: 5px;
+  margin: 0px 2px 5px 2px;
   font-size: 10px;
 }
 
@@ -16566,7 +16593,10 @@ footer .divNoire p {
   }
   footer .divGrise div:nth-of-type(3) .divHash {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 

@@ -1,3 +1,5 @@
+html
+    scroll-behavior: smooth
 header
     display: flex
     justify-content: center
@@ -6,7 +8,7 @@ header
     h1
         text-align: center
         margin: 30px 0
-        transition: 0.5s
+        transition: 1s
     nav
         display: flex
         justify-content: space-around
@@ -19,6 +21,8 @@ header
             font-size: 13px
             font-family: poppinslight
             color: gray
+        a:hover
+            color: black
         div
             display: flex
             align-items: center
@@ -41,6 +45,9 @@ header
 .dropdown
     font-family: poppinslight
     display: none
+    color: black !important
+    a
+        color: black !important
 .sticky
     position: fixed
     top: 0
@@ -139,6 +146,8 @@ header
                 color: #2C8BFA
             i:nth-of-type(3)
                 color: #F8CE02
+            i:nth-of-type(2), i:nth-of-type(4)
+                color: black !important
         .closeModal
             position: absolute
             top: 10px
