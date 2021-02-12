@@ -65,15 +65,17 @@ let titreNav = document.querySelector(".logonav")
 
 // Position NavBar
 let stickyNav = navbar.offsetTop
+let logonavGhost = document.querySelector('.logonavGhost')
 
-// Ajouter/Retirer classes
 function myFunction() {
     if (window.pageYOffset >= stickyNav) {
         navbar.classList.add("sticky")
         titreNav.classList.add("stickyLogo")
+        logonavGhost.classList.add("showGhost")
     } else {
         navbar.classList.remove("sticky")
         titreNav.classList.remove("stickyLogo")
+        logonavGhost.classList.remove("showGhost")
     }
 }
 
